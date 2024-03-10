@@ -77,10 +77,15 @@ Correct answer: `47, 45, 43, 42, 37, 34, 27, 26, 19 ,9, 3, 0 ,2, 11, 12`
 
 ### Participants Resources:
 Base map
+
 ![alt text](map.png)
 Inverted Base map
-![alt text](mapl.png) 
+
+![alt text 2](mapI.png)
+
 Map with the node numbers
-![alt text](mapWithNodeNumbers.png)
+
+![alt text 3](mapWithNodeNumbers.png)
+
 # Base Code
 Still being prepared, but found in the files.
