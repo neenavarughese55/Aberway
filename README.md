@@ -3,6 +3,10 @@ The code for the Aberway hackathon.
 ## Explanation:
 Participants are tasked with finding a path when given a starting position, some nodes that the path must cross through, and the length of the path. From that, the participants must find the path that starts at the starting position, goes through the given nodes, and ends on a node. 
 
+## Getting started:
+
+To get started, participants must fork this repository, and edit the `Your_Name_Aberway.py` file. 
+
 ## FAQ:
 
 How do we know that there will only be one path?
