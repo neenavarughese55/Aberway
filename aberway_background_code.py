@@ -10,7 +10,7 @@ def create(ColourFlip):
     divVal = 2.5 #division value so that it fits on screen
     
     random.seed(a=0x5326478324724367635627432857846378)
-
+    
     pygame.display.set_caption("AberWay")
     screen = pygame.display.set_mode([2588/divVal, 1700/divVal]) #screen size
     bg = pygame.image.load("map.png") #image
@@ -172,6 +172,8 @@ def update(NodePassIdList, screen, bg, lineList, nodeList, startPos, listOfNodes
 
     divVal = 2.5 #division value so that it fits on screen
 
+    if startPos != None:
+        NodePassIdList = [startPos] + NodePassIdList
 
     # make white the list of nodes that it passes
     contiguousLineCount = 0
@@ -181,6 +183,10 @@ def update(NodePassIdList, screen, bg, lineList, nodeList, startPos, listOfNodes
             nodeList[n][2] = [255,140,0]
 
         for i in range(0,len(NodePassIdList)-1):
+            # in case the algorithm wants to sit still for a while
+            if NodePassIdList[i] == NodePassIdList[i + 1]:
+                contiguousLineCount += 1
+                continue
             for line in lineList:
                 l = line[4]
                 if l == [NodePassIdList[i], NodePassIdList[i+1]]:
@@ -204,8 +210,8 @@ def update(NodePassIdList, screen, bg, lineList, nodeList, startPos, listOfNodes
                         totalDist += math.dist(line[0][-1], line[0][0])
 
                     line[2] = [255,140,0]
-                    contiguousLineCount += 1
-                    
+                    contiguousLineCount += 1    
+
         #check if the result is valid
         if contiguousLineCount  == len(NodePassIdList)-1:
             necissaryNodes = False
@@ -216,7 +222,7 @@ def update(NodePassIdList, screen, bg, lineList, nodeList, startPos, listOfNodes
                 if (totalDist > length-error) and (totalDist < length+error):
                     print("Success")
                 else:
-                    print("The distance is not within the accpetable range")
+                    print("The distance is not within the acceptable range")
             else:
                 print("Not all  required nodes were passed")
         else:
