@@ -166,9 +166,20 @@ def create(ColourFlip):
             line[2][2] = 255-line[2][2]
 
     return screen, bg, lineList, nodeList
+
+# small function to print the duration time
+def print_completion_time(duration):
+    nano = duration % 1000
+    duration //= 1000
+    micro = duration % 1000
+    duration //= 1000
+    milli = duration % 1000
+    duration //= 1000
+    print(f"Algorithm execution time: {duration}s, {milli}ms, {micro}μs, {nano}ns")
+
 # --- MAIN LOOP ---
 #nodes it passes
-def update(NodePassIdList, screen, bg, lineList, nodeList, startPos, listOfNodesToPass, length, error):
+def update(NodePassIdList, screen, bg, lineList, nodeList, startPos, listOfNodesToPass, length, error, duration):
 
     divVal = 2.5 #division value so that it fits on screen
 
@@ -221,6 +232,7 @@ def update(NodePassIdList, screen, bg, lineList, nodeList, startPos, listOfNodes
             if necissaryNodes:
                 if (totalDist > length-error) and (totalDist < length+error):
                     print("Success")
+                    print_completion_time(duration)
                 else:
                     print("The distance is not within the acceptable range")
             else:
