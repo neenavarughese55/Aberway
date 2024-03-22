@@ -234,9 +234,11 @@ def update(NodePassIdList, screen, bg, lineList, nodeList, startPos, listOfNodes
                     print("Success")
                     print_completion_time(duration)
                 else:
-                    print("The distance is not within the acceptable range")
+                    print(f"The distance is not within the acceptable range: got {totalDist}, wanted {length}, error {error}")
+                    print_completion_time(duration)
             else:
                 print("Not all  required nodes were passed")
+                print_completion_time(duration)
         else:
             print("The line is not contiguous")
             
