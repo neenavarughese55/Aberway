@@ -1,4 +1,4 @@
-# aberway
+![image](https://github.com/abdn-ai-soc/Aberway/assets/91621503/1f061265-1a21-4b53-ad19-0c47f7f2c1e1)# aberway
 The code for the Aberway hackathon.
 ## Explanation:
 Participants are tasked with finding a path when given a starting position, some nodes that the path must cross through, and the length of the path. From that, the participants must find the path that starts at the starting position, goes through the given nodes, and ends on a node. 
@@ -98,4 +98,14 @@ The basecode can be found in the `YourName__AberWay.py` file.
 
 If you'd like to revist the slides during the presentation, please use this link 
 https://docs.google.com/presentation/d/1Crw7Cx9DMLbHH3xeuuz369dOOmhtPXVfVP9PtoSWJFE/edit?usp=sharing
+
+
+Graph Theory in Python:
+https://www.codedrome.com/graph-theory-in-python/
+
+Visualising Graphs - Gephi:
+https://gephi.org/users/
+
+Github Documentation:
+https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop
 
