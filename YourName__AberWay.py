@@ -3,7 +3,7 @@
 from aberway_background_code import create, update, main_loop
 import time
 
-ColourFlip = True
+ColourFlip = False
 
     
 screen, bg, lineList, nodeList = create(ColourFlip)
